@@ -1,0 +1,660 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
+}
+
+body{
+background:black;
+color:white;
+}
+
+.header{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    padding: 20px 60px;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo h1{
+    color: #e50914;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+ .nav-right{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.language-box{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid rgba(255,255,255,0.5);
+    padding: 8px 12px;
+    border-radius: 5px;
+    background: rgba(0,0,0,0.4);
+}
+
+.language-box i{
+    color: white;
+    font-size: 16px;
+}
+
+.language-box select{
+    background: transparent;
+    border: none;
+    color: white;
+    outline: none;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.language-box option{
+    background: black;
+    color: white;
+}
+.signin-btn{
+    background: #e50914;
+    color: white;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.3s;
+}
+.signin-btn:hover{
+    background: #b20710;
+}
+.hero{
+    position: relative;
+    height: 100vh;
+    background: url("./Images/bg-image-1.jpg") center center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.65);
+}
+.hero-content{
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 700px;
+    padding: 20px;
+}
+.hero-content h1{
+    font-size: 3.8rem;
+    margin-bottom: 20px;
+}
+.hero-content h3{
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin-bottom: 25px;
+}
+.hero-content p{
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+
+}
+.email-box{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.email-box input{
+    width: 350px;
+    padding: 16px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+.email-box button{
+    background: #e50914;
+    color: white;
+    border: none;
+    padding: 16px 28px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.3s;
+}
+.email-box button:hover{
+    background: #b20710;
+}
+/* Netflix Curve */
+.hero::after{
+    content: "";
+    position: absolute;
+    left: 0%;
+    bottom: -40px;
+    width: 100%;
+    height: 80px;
+
+   background: radial-gradient(
+    ellipse at center,
+    #22347f 0%,
+    #10193d 25%,
+    #000 50%
+   );
+    border-top: 3px solid #e50914;
+    border-radius: 50% 50% 0 0;
+
+    box-shadow: 0 -5px 15px rgba(229,9,20,0.3);
+}
+
+.trending{
+padding:50px 10%;
+background:black;
+color:white;
+ position: relative;
+    z-index: 2;
+}
+
+
+.trending h2{
+font-size:28px;
+margin-bottom:20px;
+}
+
+.trending-slider{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.movies-container{
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 15px;
+}
+
+.movies-container::-webkit-scrollbar{
+    display: none;
+}
+
+.movie {
+    position: relative;
+    min-width: 180px;
+    flex-shrink: 0;
+}
+
+.movie img {
+    width: 180px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.movie span {
+    position: absolute;
+    bottom: 1px;
+    left: 1px;
+    font-size: 90px;
+    font-weight: 900;
+    color: #000;
+    -webkit-text-stroke: 2px #fff;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
+    line-height: 1;
+    z-index: 2;
+    font-family: Arial, sans-serif;
+    pointer-events: none;
+}
+
+.reasons{
+width:85%;
+margin:auto;
+margin-top:55px;
+}
+
+.reasons h2{
+margin-bottom:25px;
+}
+
+.cards{
+display:flex;
+gap:25px;
+flex-wrap:wrap;
+}
+
+.card{
+flex:1;
+min-width:250px;
+min-height: 300px;
+padding:25px;
+border-radius:15px;
+
+background:linear-gradient(160deg,#1c1b3a,#2b1329);
+box-shadow:0 0 20px rgba(0,0,0,0.6);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card h3{
+margin-bottom:10px;
+font-size:22px;
+}
+
+.card p{
+font-size:14px;
+line-height:1.5;
+color:#d0d0d0;
+}
+
+.card{
+    position: relative;
+}
+
+.card-icon{
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    font-size: 50px;
+    color: palevioletred;
+    background: transparent;
+}
+
+.faq-container{
+    width:60%;
+    margin:50px auto;
+}
+
+h2{
+    color:white;
+    margin-bottom:20px;
+}
+
+.faq-item{
+    margin-bottom:10px;
+}
+
+.faq-question{
+    width:100%;
+    background:#333;
+    color:white;
+    border:none;
+    padding:20px;
+    font-size:18px;
+    text-align:left;
+    cursor:pointer;
+    display:flex;
+    justify-content:space-between;
+}
+
+ .faq-answer{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+}
+
+.email-section{
+text-align:center;
+padding:40px 20px;
+color:white;
+background:black;
+}
+
+.email-section h2{
+font-size:20px;
+margin-bottom:20px;
+}
+
+.email-form{
+display:flex;
+justify-content:center;
+gap:10px;
+flex-wrap:wrap;
+}
+
+.email-form input{
+padding:15px;
+width:300px;
+font-size:16px;
+border:none;
+outline:none;
+}
+
+.email-form button{
+background:#e50914;
+color:white;
+border:none;
+padding:15px 25px;
+font-size:18px;
+cursor:pointer;
+}
+
+.email-form button:hover{
+background:#f40612;
+}
+/* Footer */
+
+.footer{
+background:#000;
+color:#757575;
+padding:50px 15%;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+.contact{
+margin-bottom:20px;
+}
+
+.footer-links{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+margin-bottom:20px;
+}
+
+.footer-links ul{
+list-style:none;
+}
+
+.footer-links ul li{
+margin:10px 0;
+}
+
+.footer-links ul li a{
+color:#757575;
+text-decoration:none;
+font-size:14px;
+}
+
+.footer-links ul li a:hover{
+text-decoration:underline;
+}
+
+.language select{
+background:black;
+color:white;
+border:1px solid #757575;
+padding:8px 20px;
+margin-top:10px;
+}
+
+.country{
+margin-top:20px;
+font-size:14px;
+}
+
+.captcha{
+margin-top:15px;
+font-size:12px;
+}
+
+
+/* ===========================
+   Responsive Design
+=========================== */
+
+/* Laptop */
+@media (max-width:1200px){
+
+.header{
+    padding:20px 40px;
+}
+
+.hero-content h1{
+    font-size:3.2rem;
+}
+
+.hero-content h3{
+    font-size:1.4rem;
+}
+
+.reasons,
+.trending{
+    width:90%;
+}
+
+.faq-container{
+    width:80%;
+}
+
+}
+
+/* Tablet */
+@media (max-width:992px){
+
+.header{
+    padding:20px;
+}
+
+.hero-content h1{
+    font-size:2.8rem;
+}
+
+.hero-content h3{
+    font-size:1.3rem;
+}
+
+.hero-content p{
+    font-size:1rem;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.card{
+    min-height:260px;
+}
+
+.footer-links{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.faq-container{
+    width:90%;
+}
+
+}
+
+/* Mobile */
+@media (max-width:768px){
+
+.header{
+    padding:15px;
+}
+
+.navbar{
+    flex-direction:column;
+    gap:15px;
+}
+
+.logo h1{
+    font-size:2rem;
+}
+
+.nav-right{
+    width:100%;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+.hero{
+    height:90vh;
+}
+
+.hero-content h1{
+    font-size:2.2rem;
+    line-height:1.2;
+}
+
+.hero-content h3{
+    font-size:1.2rem;
+}
+
+.hero-content p{
+    font-size:1rem;
+}
+
+.email-box{
+    flex-direction:column;
+    align-items:center;
+}
+
+.email-box input,
+.email-box button{
+    width:100%;
+    max-width:350px;
+}
+
+.trending{
+    padding:30px 20px;
+}
+
+.movie{
+    min-width:150px;
+}
+
+.movie img{
+    width:150px;
+    height:220px;
+}
+
+.movie span{
+    font-size:70px;
+}
+
+.scroll-btn{
+    display:none;
+}
+
+.cards{
+    grid-template-columns:1fr;
+}
+
+.card{
+    min-height:240px;
+}
+
+.card-icon{
+    font-size:45px;
+}
+
+.faq-container{
+    width:95%;
+}
+
+.faq-question{
+    font-size:16px;
+    padding:18px;
+}
+
+.email-form{
+    flex-direction:column;
+    align-items:center;
+}
+
+.email-form input,
+.email-form button{
+    width:100%;
+    max-width:350px;
+}
+
+.footer{
+    padding:40px 20px;
+}
+
+.footer-links{
+    grid-template-columns:1fr;
+}
+
+}
+
+/* Small Mobile */
+@media (max-width:480px){
+
+.logo h1{
+    font-size:1.8rem;
+}
+
+.hero{
+    height:85vh;
+}
+
+.hero-content h1{
+    font-size:1.8rem;
+}
+
+.hero-content h3{
+    font-size:1rem;
+}
+
+.hero-content p{
+    font-size:0.9rem;
+}
+
+.email-box input,
+.email-box button{
+    font-size:15px;
+    padding:14px;
+}
+
+.movie{
+    min-width:130px;
+}
+
+.movie img{
+    width:130px;
+    height:190px;
+}
+
+.movie span{
+    font-size:55px;
+}
+
+.card{
+    padding:20px;
+}
+
+.card h3{
+    font-size:20px;
+}
+
+.card p{
+    font-size:14px;
+}
+
+.card-icon{
+    font-size:38px;
+}
+
+.email-section h2{
+    font-size:18px;
+}
+
+.contact,
+.country,
+.captcha{
+    text-align:center;
+}
+
+.language{
+    text-align:center;
+}
+
+}
